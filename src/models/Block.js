@@ -10,8 +10,6 @@ class Block {
   isValid() {}
 
   setNonce(nonce) {}
-  
 }
 
 export default Block
-
