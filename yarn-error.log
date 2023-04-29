@@ -1,0 +1,42 @@
+Arguments: 
+  /usr/local/bin/node /opt/homebrew/Cellar/yarn/1.22.19/libexec/bin/yarn.js check:lesson1
+
+PATH: 
+  /Users/caos/miniconda3/bin:/Users/caos/.bun/bin:/Users/caos/.cargo/bin:/Users/caos/.orbstack/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin:~/.cargo/bin
+
+Yarn version: 
+  1.22.19
+
+Node version: 
+  18.11.0
+
+Platform: 
+  darwin arm64
+
+Trace: 
+  SyntaxError: /Users/caos/workspace/temp/cuit/blockchain-in-js-workshop-2021/package.json: Unexpected token } in JSON at position 152
+      at JSON.parse (<anonymous>)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:1629:59
+      at Generator.next (<anonymous>)
+      at step (/opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:310:30)
+      at /opt/homebrew/Cellar/yarn/1.22.19/libexec/lib/cli.js:321:13
+
+npm manifest: 
+  {
+    "name": "blockchain-js",
+    "version": "0.1.0",
+    "dependencies": {
+      "crypto-js": "^3.1.9-1",
+      "elliptic": "^6.4.0",
+      "ramda": "^0.25.0",
+    },
+    "scripts": {
+      "check:lesson1": "node src/tests/lesson1.js"
+    }
+  }
+
+yarn manifest: 
+  No manifest
+
+Lockfile: 
+  No lockfile

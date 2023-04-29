@@ -1,0 +1,13 @@
+{
+  "name": "blockchain-js",
+  "version": "0.1.0",
+  "type": "module",
+  "dependencies": {
+    "crypto-js": "^3.1.9-1",
+    "elliptic": "^6.4.0",
+    "ramda": "^0.25.0"
+  },
+  "scripts": {
+    "check:lesson1": "node src/tests/lesson1.js"
+  }
+}
