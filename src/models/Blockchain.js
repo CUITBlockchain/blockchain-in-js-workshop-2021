@@ -1,6 +1,5 @@
 import UTXOPool from './UTXOPool.js'
 
-Blockchain
 class Blockchain {
   // 1. 完成构造函数及其参数
   /* 构造函数需要包含
@@ -36,8 +35,6 @@ class Blockchain {
   _addBlock(block) {
     if (!block.isValid()) return
     if (this.containsBlock(block)) return
-
-    // 添加 UTXO 快照与更新的相关逻辑
   }
 }
 
