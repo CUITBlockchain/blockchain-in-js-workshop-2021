@@ -14,6 +14,12 @@ class Transaction {
   _calculateHash() {
 
   }
+
+  // 校验交易签名 返回 bool 类型的值
+  hasValidSignature() {
+
+  }
+
 }
 
 export default Transaction

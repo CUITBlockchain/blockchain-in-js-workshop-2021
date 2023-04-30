@@ -26,6 +26,11 @@ class Block {
    * 需包含 UTXOPool 的更新与 hash 的更新
    */
   addTransaction() {}
+
+  // 添加签名校验逻辑
+  isValidTransaction(transaction) {
+    
+  }
 }
 
 export default Block
