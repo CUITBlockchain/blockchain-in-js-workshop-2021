@@ -14,26 +14,26 @@ const main = () => {
 
   // 构建区块
   var newBlock = new Block(
-    blockchain,
-    genesisBlock.hash,
-    1,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      genesisBlock.hash,
+      1,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   blockchain.blocks[newBlock.hash] = newBlock
 
   var nextBlock = new Block(
-    blockchain,
-    newBlock.hash,
-    2,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      newBlock.hash,
+      2,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   var nextCompetitionBlock = new Block(
-    blockchain,
-    newBlock.hash,
-    2,
-    sha256((new Date().getTime() + 1).toString()).toString(),
+      blockchain,
+      newBlock.hash,
+      2,
+      sha256((new Date().getTime() + 1).toString()).toString(),
   )
 
   // 添加两个区块高度为 2  的的竞争区块
@@ -45,10 +45,10 @@ const main = () => {
   console.assert(longestChain.length == 2, 'Block height should be 2')
 
   var thirdBlock = new Block(
-    blockchain,
-    nextCompetitionBlock.hash,
-    3,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      nextCompetitionBlock.hash,
+      3,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   blockchain.blocks[thirdBlock.hash] = thirdBlock
@@ -56,10 +56,10 @@ const main = () => {
   longestChain = blockchain.longestChain()
 
   // 区块检查
-  console.assert(longestChain.length == 3, 'Block height should be 2')
+  console.assert(longestChain.length == 3, 'Block height should be 3')
   console.assert(
-    longestChain[2].hash == thirdBlock.hash,
-    `Height block hash should be ${thirdBlock.hash}`,
+      longestChain[2].hash == thirdBlock.hash,
+      `Height block hash should be ${thirdBlock.hash}`,
   )
 }
 
