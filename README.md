@@ -6,13 +6,13 @@
 - 2021131028-翁忠旭
 - 2021131050-张蕊
 - 2021131051-黄诗怡
-  2021131053-吕梓桐
-  2021131077-程诗杰
+- 2021131053-吕梓桐
+- 2021131077-程诗杰
 
 
 ## 代码仓库链接
 
-https://github.com/caosbad/blockchain-in-js-workshop-2021(示例用，请根据自身的仓库替换)
+https://github.com/OrrrGE/blockchain-in-js-workshop-2021
 
 
 
