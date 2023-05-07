@@ -5,6 +5,7 @@ import sha256 from 'crypto-js/sha256.js'
 const main = () => {
   // 初始化区块链
   var blockchain = new Blockchain('BitCoin')
+  blockchain.blocks={}
 
   // 创建创世区块
   var genesisBlock = new Block(blockchain, 'root', 0, 'root')

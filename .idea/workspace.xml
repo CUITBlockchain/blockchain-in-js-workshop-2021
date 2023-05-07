@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
     <list default="true" id="9ec28c51-8606-4581-9cb0-438cbb295189" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
@@ -27,8 +30,13 @@
     "RunOnceActivity.go.migrated.go.modules.settings": "true",
     "WebServerToolWindowFactoryState": "false",
     "go.import.settings.migrated": "true",
+    "last_opened_file_path": "D:/Tencent/blockchain-in-js-workshop-2021",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
     "nodejs_package_manager_path": "yarn",
-    "settings.editor.selected.configurable": "com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable"
+    "settings.editor.selected.configurable": "settings.nodejs"
   }
 }]]></component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
@@ -39,7 +47,10 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1683295250105</updated>
-      <workItem from="1683295252200" duration="135000" />
+      <workItem from="1683295252200" duration="2441000" />
+      <workItem from="1683353053449" duration="68000" />
+      <workItem from="1683360341084" duration="11588000" />
+      <workItem from="1683429560253" duration="9236000" />
     </task>
     <servers />
   </component>
@@ -59,5 +70,9 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
