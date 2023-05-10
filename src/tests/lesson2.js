@@ -25,11 +25,11 @@ const main = () => {
   )
 
   // 验证区块难度合法性
-  console.assert(newBlock.isValid() == false, 'Error: Very low probability')
+  console.assert(newBlock.isValid() === false, 'Error: Very low probability')
 
   newBlock = calcNonce(newBlock)
 
-  console.assert(newBlock.isValid() == true, 'Error: Very low probability')
+  console.assert(newBlock.isValid() === true, 'Error: Very low probability')
 
   blockchain.blocks[newBlock.hash] = newBlock
 
@@ -55,7 +55,7 @@ const main = () => {
 
   let longestChain = blockchain.longestChain()
 
-  console.assert(longestChain.length == 2, 'Error: Block height should be 2')
+  console.assert(longestChain.length === 2, 'Error: Block height should be 2')
 
   let thirdBlock = new Block(
     blockchain,
@@ -72,9 +72,9 @@ const main = () => {
   longestChain = blockchain.longestChain()
 
   // 区块检查
-  console.assert(longestChain.length == 3, 'Block height should be 2')
+  console.assert(longestChain.length === 3, 'Block height should be 2')
   console.assert(
-    longestChain[2].hash == thirdBlock.hash,
+    longestChain[2].hash === thirdBlock.hash,
     `Height block hash should be ${thirdBlock.hash}`,
   )
 }
