@@ -38,7 +38,7 @@ class Blockchain {
         return false;
       }
 
-      return [x, this.blocks[x.parentHash]];
+      return [x, this.blocks[x.previousHash]];
     };
     return reverse(unfold(getParent, this.maxHeightBlock()));
   }
