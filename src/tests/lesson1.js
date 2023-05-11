@@ -6,7 +6,7 @@ const main = () => {
   // 初始化区块链
 
 
-  
+
 
   let blockchain = new Blockchain('BitCoin')
 

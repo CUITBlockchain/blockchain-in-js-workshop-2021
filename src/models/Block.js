@@ -7,19 +7,19 @@ class Block {
 
 
 
-  constructor(index,previousHash,hash,timestamp) {
-    this.index = index;
+  constructor(blockchain,previousHash,height,hash) {
+    this.blockchain = blockchain;
     this.hash=hash
     this.previousHash = previousHash.toString();
-    this.timestamp = timestamp;
+    this.height = height;
 
   }
 
-  constructor() {}
-
   isValid() {}
 
-  setNonce(nonce) {}
+  setNonce(nonce) {
+
+  }
   
 
 }

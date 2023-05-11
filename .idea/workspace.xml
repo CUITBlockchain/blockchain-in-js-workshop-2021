@@ -52,6 +52,9 @@
       <workItem from="1683360341084" duration="11588000" />
       <workItem from="1683429560253" duration="9236000" />
       <workItem from="1683726911438" duration="5000" />
+      <workItem from="1683731675491" duration="9000" />
+      <workItem from="1683731849693" duration="524000" />
+      <workItem from="1683806539012" duration="7215000" />
     </task>
     <servers />
   </component>
@@ -71,6 +74,30 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/tests/lesson1.js</url>
+          <line>58</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/tests/lesson1.js</url>
+          <line>27</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="3" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/tests/lesson1.js</url>
+          <line>17</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="4" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
   <component name="XSLT-Support.FileAssociations.UIState">
     <expand />
