@@ -49,6 +49,7 @@ const main = () => {
 
   nextBlock = calcNonce(nextBlock)
   nextCompetitionBlock = calcNonce(nextCompetitionBlock)
+
   // 添加两个区块高度为 2  的的竞争区块
   blockchain.blocks[nextBlock.hash] = nextBlock
   blockchain.blocks[nextCompetitionBlock.hash] = nextCompetitionBlock

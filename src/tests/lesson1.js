@@ -12,7 +12,7 @@ const main = () => {
   // 设置创世区块
   blockchain.genesis = genesisBlock
 
-  // 构建高度为1的区块
+  // 构建区块,创世区块后的第一个区块
   let newBlock = new Block(
     blockchain,
     genesisBlock.hash,
@@ -20,7 +20,7 @@ const main = () => {
     sha256(new Date().getTime().toString()).toString(),
   )
 
-  // 将高度为1的区块添加到链中
+  // 将一个新的区块（newBlock）添加到区块链（blockchain）中
   blockchain.blocks[newBlock.hash] = newBlock
 
   // 定义高度为2的区块1号
@@ -45,14 +45,14 @@ const main = () => {
 
   console.log() //必须要加这行代码，不然运行时会有概率的运行成功？？？为什么
 
-  // 定义longestChain数组，使它等于区块链的最长链
+  // 由longestChain()函数得到一个数组，该数组存储最长链上对应的区块,即[]
   let longestChain = blockchain.longestChain()
 
-  // JavaScript 的 console.assert() 方法，它的作用是对某个条件进行断言，如果条件不成立，就会输出一个错误信息
-  // 最长的区块链应该有两个块。如果这个条件不成立，就会输出错误信息 'Block height should be 2'
+  // 断言的条件是longestChain.length == 2，即最长的区块链（longestChain）应该有两个区块。
+  // 如果条件成立，则程序继续运行，否则抛出一个异常，并输出Block height should be 2作为错误信息。
   console.assert(longestChain.length === 2, 'Block height should be 2')
 
-  // 定义高度为3的区块
+  // 加入两个竞争区块后，链上有两条分支，现在又定义第三个区块
   let thirdBlock = new Block(
     blockchain,
     nextCompetitionBlock.hash,
@@ -63,8 +63,7 @@ const main = () => {
   // 将高度为3的区块加入到链中
   blockchain.blocks[thirdBlock.hash] = thirdBlock
 
-  // 重新得到整个链的最长链
-  // 注意：此时整个链有两条支链
+  // 现在返回的这个数组应是最长链所对应的所有区块，即[newBlock, nextCompetitionBloc, thirdBlock]
   longestChain = blockchain.longestChain()
 
   // console.log("这是最长链")
