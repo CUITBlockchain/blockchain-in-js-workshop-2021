@@ -1,6 +1,7 @@
 import Block from '../models/Block.js'
 import Blockchain from '../models/Blockchain.js'
 import sha256 from 'crypto-js/sha256.js'
+import block from "../models/Block.js";
 
 const main = () => {
   // 初始化区块链
@@ -24,8 +25,10 @@ const main = () => {
     1,
     sha256(new Date().getTime().toString()).toString(),
   )
-
   blockchain.blocks[newBlock.hash] = newBlock
+
+
+
 
   let nextBlock = new Block(
     blockchain,
@@ -63,7 +66,7 @@ const main = () => {
   // 区块检查
   console.assert(longestChain.length == 3, 'Block height should be 2')
   console.assert(
-    longestChain[2].hash == thirdBlock.hash,
+    longestChain[2].hash === thirdBlock.hash,
     `Height block hash should be ${thirdBlock.hash}`,
   )
 }

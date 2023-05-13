@@ -30,7 +30,7 @@
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Tencent/blockchain-in-js-workshop-2021&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/github/blockchain-in-js-workshop-2021&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -55,7 +55,12 @@
       <workItem from="1683731675491" duration="9000" />
       <workItem from="1683731849693" duration="524000" />
       <workItem from="1683806539012" duration="8873000" />
-      <workItem from="1683818135074" duration="311000" />
+      <workItem from="1683818135074" duration="1059000" />
+      <workItem from="1683857790109" duration="689000" />
+      <workItem from="1683858870337" duration="269000" />
+      <workItem from="1683861035408" duration="289000" />
+      <workItem from="1683897460100" duration="7110000" />
+      <workItem from="1683950313792" duration="10244000" />
     </task>
     <servers />
   </component>
@@ -81,9 +86,9 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/src/tests/lesson1.js</url>
-          <line>60</line>
+          <line>61</line>
           <properties lambdaOrdinal="-1" />
-          <option name="timeStamp" value="6" />
+          <option name="timeStamp" value="18" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

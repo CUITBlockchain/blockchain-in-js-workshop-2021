@@ -15,10 +15,12 @@ class Block {
 
   }
 
-  isValid() {}
+  isValid() {
+
+  }
 
   setNonce(nonce) {
-
+    this.nonce=nonce
   }
   
 
