@@ -77,6 +77,85 @@ const main = () => {
     longestChain[2].hash == thirdBlock.hash,
     `Height block hash should be ${thirdBlock.hash}`,
   )
+
+
+  let forthBlock = new Block(
+      blockchain,
+      thirdBlock.hash,
+      4,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  forthBlock = calcNonce(forthBlock)
+  blockchain.blocks[forthBlock.hash] = forthBlock
+  longestChain = blockchain.longestChain()
+
+
+  let fifthBlock = new Block(
+      blockchain,
+      forthBlock.hash,
+      5,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  fifthBlock = calcNonce(fifthBlock)
+  blockchain.blocks[fifthBlock.hash] = fifthBlock
+  longestChain = blockchain.longestChain()
+
+
+  let sixthBlock = new Block(
+      blockchain,
+      fifthBlock.hash,
+      6,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  sixthBlock = calcNonce(sixthBlock)
+  blockchain.blocks[sixthBlock.hash] = sixthBlock
+  longestChain = blockchain.longestChain()
+
+
+  let seventhBlock = new Block(
+      blockchain,
+      sixthBlock.hash,
+      7,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  seventhBlock = calcNonce(seventhBlock)
+  blockchain.blocks[seventhBlock.hash] = seventhBlock
+  longestChain = blockchain.longestChain()
+
+
+  let eighthBlock = new Block(
+      blockchain,
+      seventhBlock.hash,
+      8,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  eighthBlock = calcNonce(eighthBlock)
+  blockchain.blocks[eighthBlock.hash] = eighthBlock
+  longestChain = blockchain.longestChain()
+
+
+  let ninthBlock = new Block(
+      blockchain,
+      eighthBlock.hash,
+      9,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  ninthBlock = calcNonce(ninthBlock)
+  blockchain.blocks[ninthBlock.hash] = ninthBlock
+  longestChain = blockchain.longestChain()
+
+
+  let tenthBlock = new Block(
+      blockchain,
+      ninthBlock.hash,
+      10,
+      sha256(new Date().getTime().toString()).toString(),
+  )
+  tenthBlock = calcNonce(tenthBlock)
+  blockchain.blocks[tenthBlock.hash] = tenthBlock
+  longestChain = blockchain.longestChain()
+
+
 }
 
 main()
