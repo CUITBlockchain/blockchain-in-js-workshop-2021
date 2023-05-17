@@ -7,7 +7,9 @@ class Block {
 
   constructor() {}
 
-  isValid() {}
+  isValid() {
+    return false
+  }
 
   setNonce(nonce) {}
 }
