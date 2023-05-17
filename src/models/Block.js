@@ -7,6 +7,7 @@ class Block {
 
 
 
+
   constructor(blockchain,previousHash,height,hash) {
     this.blockchain = blockchain;
     this.hash=hash
@@ -40,7 +41,13 @@ class Block {
   }
   
 
+
+  isValid() {
+    return false
+  }
+
+  setNonce(nonce) {}
+
 }
 
 export default Block
-
