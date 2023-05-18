@@ -3,14 +3,34 @@ import sha256 from 'crypto-js/sha256.js'
 export const DIFFICULTY = 2
 
 class Block {
-  // 1. 完成构造函数及其参数
+  constructor(blockchain, prevHash, height, data) {
+    this.blockchain = blockchain
+    this.prevHash = prevHash
+    this.height = height
+    this.data = data
+    this.nonce = -1
+    this.hash = ''
+  }
 
-  constructor() {}
+  isValid() {
+    const prefix = '0'.repeat(DIFFICULTY)
+    return this.hash.startsWith(prefix)
+  }
 
-  isValid() {}
+  setNonce(nonce) {
+    this.nonce = nonce
+    this.hash = this.computeHash()
+  }
 
-  setNonce(nonce) {}
-  
+  computeHash() {
+    return sha256(
+      this.blockchain.name +
+        this.prevHash +
+        this.height.toString() +
+        this.data +
+        this.nonce.toString()
+    ).toString()
+  }
 }
 
 export default Block
