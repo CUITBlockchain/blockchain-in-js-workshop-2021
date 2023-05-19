@@ -17,9 +17,6 @@ class Block {
   }
 
   isValid() {
-    if (this.previousHash ==='root'){
-      return true
-    }
     return  this.hash === this.calculateHash()&&
         (this.hash.substring(0,DIFFICULTY) ==='0'.repeat(DIFFICULTY))
   }
@@ -39,14 +36,7 @@ class Block {
   setHash(){
     this.hash = this.calculateHash()
   }
-  
 
-
-  isValid() {
-    return false
-  }
-
-  setNonce(nonce) {}
 
 }
 

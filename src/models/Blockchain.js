@@ -28,10 +28,7 @@ class Blockchain {
 
 
 
-  // 2. 定义 longestChain 函数
-  /*
-    返回当前链中最长的区块信息列表
-  */
+
 
 
 
@@ -58,9 +55,7 @@ class Blockchain {
 
 
 
-  longestChain() {
-    return []
-  }
+
 
   // 判断当前区块链是否包含
   containsBlock(block) {
@@ -68,10 +63,8 @@ class Blockchain {
     return false
   }
 
-  // 获得区块高度最高的区块
-  maxHeightBlock() {
-    // return Block
-  }
+
+
 
   // 添加区块
   /*
