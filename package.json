@@ -8,6 +8,9 @@
     "ramda": "^0.25.0"
   },
   "scripts": {
-    "check:lesson1": "node src/tests/lesson1.js"
+    "check:lesson1": "node src/tests/lesson1.js",
+    "check:lesson2": "node src/tests/lesson2.js",
+    "check:lesson3": "node src/tests/lesson3.js",
+    "check:lesson4": "node src/tests/lesson4.js"
   }
 }
