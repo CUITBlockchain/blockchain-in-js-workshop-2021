@@ -1,12 +1,5 @@
-
 // Blockchain
-import Block from "./Block.js";
 import {maxBy, prop, reduce, reverse, unfold, values} from "ramda";
-
-
-
-
-import UTXOPool from './UTXOPool.js'
 
 
 class Blockchain {
@@ -21,9 +14,6 @@ class Blockchain {
     this.blocks={}
     this.name=name
     this.genesis=null
-    if (this.genesis){
-      this.blocks[this.genesis.hash] = this.genesis
-    }
   }
 
 
@@ -53,27 +43,45 @@ class Blockchain {
 
 
 
-
-
-
-
   // 判断当前区块链是否包含
   containsBlock(block) {
     // 添加判断方法
+    if (this.blocks[block.hash] === block){
+      return true
+    }
     return false
   }
 
 
-
-
   // 添加区块
+
   /*
 
   */
   _addBlock(block) {
-    if (!block.isValid()) return
-    if (this.containsBlock(block)) return
+    if (!block.isValid())
+      return;
+    if (this.containsBlock(block))
+      return;
+    const previousBlock = this.blocks[block.previousHash];
+    if (block.previousHash=='root'){
+      block.utxoPool=this.genesis.utxoPool.clone()
+      block.utxoPool.addUTXO(block.coinbaseBeneficiary,12.5)
+      this.blocks[block.hash] = block;
 
+      return;
+    }
+    if (previousBlock === undefined && previousBlock.height + 1 !== block.height  )
+      return;
+
+
+    block.utxoPool=previousBlock.utxoPool.clone()
+
+
+    block.utxoPool.addUTXO(block.coinbaseBeneficiary,12.5)
+
+
+    this.blocks[block.hash] = block;
     // 添加 UTXO 快照与更新的相关逻辑
   }
 

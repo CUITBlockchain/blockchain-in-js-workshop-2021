@@ -31,6 +31,7 @@
     &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/ideaProjects/pythonlanguage&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -69,6 +70,9 @@
       <workItem from="1684472256538" duration="2107000" />
       <workItem from="1684492113429" duration="2162000" />
       <workItem from="1684504816779" duration="1245000" />
+      <workItem from="1684658423263" duration="3064000" />
+      <workItem from="1684835566997" duration="870000" />
+      <workItem from="1684914809776" duration="9828000" />
     </task>
     <servers />
   </component>
@@ -98,14 +102,10 @@
           <option name="timeStamp" value="18" />
         </line-breakpoint>
         <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/tests/lesson2.js</url>
-          <line>27</line>
-          <option name="timeStamp" value="19" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/tests/lesson2.js</url>
-          <line>31</line>
-          <option name="timeStamp" value="20" />
+          <url>file://$PROJECT_DIR$/src/models/Blockchain.js</url>
+          <line>83</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="29" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

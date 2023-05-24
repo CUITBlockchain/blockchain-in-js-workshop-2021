@@ -1,5 +1,5 @@
 import sha256 from 'crypto-js/sha256.js'
-
+import UTXOPool from "./UTXOPool.js";
 export const DIFFICULTY = 3
 
 class Block {
@@ -8,12 +8,13 @@ class Block {
 
 
 
-  constructor(blockchain,previousHash,height,hash) {
+  constructor(blockchain,previousHash,height,hash,coinbaseBeneficiary) {
     this.blockchain = blockchain;
     this.hash=hash
     this.previousHash = previousHash.toString();
     this.height = height;
-
+    this.coinbaseBeneficiary = coinbaseBeneficiary
+    this.utxoPool = new UTXOPool()
   }
 
   isValid() {
@@ -30,7 +31,8 @@ class Block {
     return sha256(
       this.nonce+
         this.previousHash+
-        this.height
+        this.height+
+        this.coinbaseBeneficiary
     ).toString();
   }
   setHash(){
