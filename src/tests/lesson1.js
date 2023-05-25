@@ -14,10 +14,10 @@ const main = () => {
 
   // 构建区块,创世区块后的第一个区块
   let newBlock = new Block(
-    blockchain,
-    genesisBlock.hash,
-    1,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      genesisBlock.hash,
+      1,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   // 将一个新的区块（newBlock）添加到区块链（blockchain）中
@@ -25,18 +25,18 @@ const main = () => {
 
   // 定义高度为2的区块1号
   let nextBlock = new Block(
-    blockchain,
-    newBlock.hash,
-    2,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      newBlock.hash,
+      2,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   // 定义高度为2的区块2号
   let nextCompetitionBlock = new Block(
-    blockchain,
-    newBlock.hash,
-    2,
-    sha256((new Date().getTime() + 1).toString()).toString(),
+      blockchain,
+      newBlock.hash,
+      2,
+      sha256((new Date().getTime() + 1).toString()).toString(),
   )
 
   // 添加两个区块高度为 2  的的竞争区块
@@ -54,10 +54,10 @@ const main = () => {
 
   // 加入两个竞争区块后，链上有两条分支，现在又定义第三个区块
   let thirdBlock = new Block(
-    blockchain,
-    nextCompetitionBlock.hash,
-    3,
-    sha256(new Date().getTime().toString()).toString(),
+      blockchain,
+      nextCompetitionBlock.hash,
+      3,
+      sha256(new Date().getTime().toString()).toString(),
   )
 
   // 将高度为3的区块加入到链中
@@ -74,8 +74,13 @@ const main = () => {
   // 区块检查
   console.assert(longestChain.length === 3, 'Block height should be 2')
   console.assert(
+<<<<<<< Updated upstream
     longestChain[2].hash === thirdBlock.hash,
     `Height block hash should be ${thirdBlock.hash}`,
+=======
+      longestChain[2].hash === thirdBlock.hash,
+      `Height block hash should be ${thirdBlock.hash}`,
+>>>>>>> Stashed changes
   )
 }
 
