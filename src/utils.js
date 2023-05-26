@@ -1,7 +1,7 @@
 import sha256 from 'crypto-js/sha256.js'
 
 
-export const validateHash = () => {
+
 
 
 export const validateHash = (hash) => {
@@ -25,4 +25,4 @@ export const validateHash = (hash) => {
     )
     return block
   }
-}
+
