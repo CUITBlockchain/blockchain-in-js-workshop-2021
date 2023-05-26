@@ -17,7 +17,7 @@ https://github.com/coconal/blockchain-in-js-workshop-2021
 
 ## 第一课代码
 https://github.com/coconal/blockchain-in-js-workshop-2021/blob/lesson1/src/models/Block.js
-https://github.com/coconal/blockchain-in-js-workshop-2021/blob/lesson1/src/models/Blockchain.js
+
 
 ### 代码 commint 地址
 
@@ -38,11 +38,11 @@ https://github.com/coconal/blockchain-in-js-workshop-2021/commit/7393063bf1eaf2f
 
 
 ## 第二课代码
-https://github.com/coconal/blockchain-in-js-workshop-2021/blob/lesson1/src/models/Block.js
+https://github.com/coconal/blockchain-in-js-workshop-2021/tree/lesson2/src
 
 ### 代码 commint 地址
 
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/4999151ad09dfddd94fe4b65da0d418a146d3470
+https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/compare/lesson2...coconal:blockchain-in-js-workshop-2021:lesson2
 
 
 ### 代码截图
@@ -75,11 +75,11 @@ https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/4999151a
 
 
 ## 第三课代码
-
+https://github.com/coconal/blockchain-in-js-workshop-2021/tree/lesson3/src
 
 ### 代码 commint 地址
 
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d83a9fff2b4514c5503f470df939d0c2af
+https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/compare/lesson3...coconal:blockchain-in-js-workshop-2021:lesson3
 
 
 ### 代码截图
