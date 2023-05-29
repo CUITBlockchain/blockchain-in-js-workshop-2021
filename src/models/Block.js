@@ -15,6 +15,7 @@ class Block {
     this.height = height;
     this.coinbaseBeneficiary = coinbaseBeneficiary
     this.utxoPool = new UTXOPool()
+    this.transactions = {}
   }
 
   isValid() {
@@ -32,7 +33,8 @@ class Block {
       this.nonce+
         this.previousHash+
         this.height+
-        this.coinbaseBeneficiary
+        this.coinbaseBeneficiary+
+        this.transactions
     ).toString();
   }
   setHash(){

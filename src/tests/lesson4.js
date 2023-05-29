@@ -66,6 +66,7 @@ const main = () => {
     nextBlock.hash,
     3,
     sha256(new Date().getTime().toString()).toString(),
+      miner,
   )
 
   thirdBlock = calcNonce(thirdBlock)

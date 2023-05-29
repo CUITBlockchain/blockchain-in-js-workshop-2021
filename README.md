@@ -86,7 +86,8 @@ https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/compare/lesson3
 
 > 将截图上传至网盘，放入链接即可
 
-![](链接)
+[链接：https://pan.baidu.com/s/1Ye48EzlWQrZIJJf3FAlr6g?pwd=r1hg
+提取码：r1hg](链接)
 
 
 ### 主观与讨论题内容
@@ -99,18 +100,19 @@ https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/compare/lesson3
 
 
 ## 第四课代码
-
+https://github.com/coconal/blockchain-in-js-workshop-2021/tree/lesson4/src
 
 ### 代码 commint 地址
 
-https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/commit/25f3a0d83a9fff2b4514c5503f470df939d0c2af
+https://github.com/CUITBlockchain/blockchain-in-js-workshop-2021/compare/lesson4...coconal:blockchain-in-js-workshop-2021:lesson4
 
 
 ### 代码截图
 
 > 将截图上传至网盘，放入链接即可
 
-![](链接)
+[链接：https://pan.baidu.com/s/1DjS-UlNsqO6Pm1R3PDFaPw?pwd=c3q8
+提取码：c3q8](链接)
 
 
 ### 主观与讨论题内容
