@@ -32,7 +32,7 @@ class UTXOPool {
 
   // 处理交易函数
   handleTransaction(transaction) {
-    if (!this.isValidTransaction(transaction)){
+    if (!this.isValidTransaction(transaction.inputPublicKey,transaction.value)){
       return
     }
     const inUtxo = this.utxos[transaction.inputPublicKey]
@@ -49,8 +49,7 @@ class UTXOPool {
    * 验证余额
    * 返回 bool 
    */
-  isValidTransaction(transaction) {
-    const {value,inputPublicKey} = transaction
+  isValidTransaction(inputPublicKey,value) {
     const Utxo = this.utxos[inputPublicKey]
     if (Utxo == undefined){
       return false

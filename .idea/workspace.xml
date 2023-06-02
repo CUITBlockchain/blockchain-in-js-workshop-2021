@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="9ec28c51-8606-4581-9cb0-438cbb295189" name="变更" comment="" />
+    <list default="true" id="a53605ac-83e2-4e41-8a66-ab0d9814fe13" name="变更" comment="" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -13,69 +13,41 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="GoLibraries">
-    <option name="indexEntireGoPath" value="true" />
-  </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
   </component>
-  <component name="ProjectId" id="2PNQprAVfb9WbNuu0lrf2v4sENV" />
+  <component name="ProjectId" id="2QJci5mLk1La4Do2EdqNYiOypSB" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.go.format.on.save.advertiser.fired": "true",
-    "RunOnceActivity.go.formatter.settings.were.checked": "true",
-    "RunOnceActivity.go.migrated.go.modules.settings": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "go.import.settings.migrated": "true",
-    "last_opened_file_path": "D:/github/blockchain-in-js-workshop-2021",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "settings.editor.selected.configurable": "vcs.Git"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.format.on.save.advertiser.fired&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.formatter.settings.were.checked&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.go.migrated.go.modules.settings&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;go.import.settings.migrated&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;com.poratu.idea.plugins.tomcat.setting.TomcatServersConfigurable&quot;
   }
-}]]></component>
+}</component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="应用程序级" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
     <task active="true" id="Default" summary="默认任务">
-      <changelist id="9ec28c51-8606-4581-9cb0-438cbb295189" name="变更" comment="" />
-      <created>1683295250105</created>
+      <changelist id="a53605ac-83e2-4e41-8a66-ab0d9814fe13" name="变更" comment="" />
+      <created>1685075251810</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
-      <updated>1683295250105</updated>
-      <workItem from="1683295252200" duration="2441000" />
-      <workItem from="1683353053449" duration="68000" />
-      <workItem from="1683360341084" duration="11588000" />
-      <workItem from="1683429560253" duration="9236000" />
-      <workItem from="1683726911438" duration="5000" />
-      <workItem from="1683731675491" duration="9000" />
-      <workItem from="1683731849693" duration="524000" />
-      <workItem from="1683806539012" duration="8873000" />
-      <workItem from="1683818135074" duration="1059000" />
-      <workItem from="1683857790109" duration="689000" />
-      <workItem from="1683858870337" duration="269000" />
-      <workItem from="1683861035408" duration="289000" />
-      <workItem from="1683897460100" duration="7110000" />
-      <workItem from="1683950313792" duration="10994000" />
-      <workItem from="1684142734728" duration="1137000" />
-      <workItem from="1684236831778" duration="3142000" />
-      <workItem from="1684310650865" duration="4975000" />
-      <workItem from="1684323967273" duration="3549000" />
-      <workItem from="1684335821228" duration="35000" />
-      <workItem from="1684335873009" duration="1188000" />
-      <workItem from="1684472256538" duration="2107000" />
-      <workItem from="1684492113429" duration="2162000" />
-      <workItem from="1684504816779" duration="1245000" />
-      <workItem from="1684658423263" duration="3064000" />
-      <workItem from="1684835566997" duration="870000" />
-      <workItem from="1684914809776" duration="9828000" />
-      <workItem from="1685266858559" duration="1401000" />
-      <workItem from="1685361134861" duration="123000" />
-      <workItem from="1685374052706" duration="593000" />
+      <updated>1685075251810</updated>
+      <workItem from="1685075253994" duration="585000" />
+      <workItem from="1685669715618" duration="41000" />
+      <workItem from="1685669810475" duration="18000" />
     </task>
     <servers />
   </component>
@@ -95,25 +67,5 @@
   </component>
   <component name="VgoProject">
     <settings-migrated>true</settings-migrated>
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/tests/lesson1.js</url>
-          <line>61</line>
-          <option name="timeStamp" value="18" />
-        </line-breakpoint>
-        <line-breakpoint enabled="true" type="javascript">
-          <url>file://$PROJECT_DIR$/src/models/Blockchain.js</url>
-          <line>83</line>
-          <option name="timeStamp" value="29" />
-        </line-breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
-  </component>
-  <component name="XSLT-Support.FileAssociations.UIState">
-    <expand />
-    <select />
   </component>
 </project>

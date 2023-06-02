@@ -2,10 +2,9 @@ import sha256 from 'crypto-js/sha256.js'
 
 
 class Transaction {
-  constructor(inputPublicKey,outputPublicKey,value,fee,signature) {
+  constructor(inputPublicKey,outputPublicKey,value) {
     this.inputPublicKey = inputPublicKey
     this.outputPublicKey = outputPublicKey
-    this.signature = signature
     this.value = value
     this._setHash()
   }
@@ -20,9 +19,8 @@ class Transaction {
    return sha256(
        this.inputPublicKey+
        this.outputPublicKey+
-       this.value+
-       this.signature
-   )
+       this.value
+   ).toString()
   }
 }
 
