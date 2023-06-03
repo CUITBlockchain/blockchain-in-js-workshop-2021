@@ -1,5 +1,6 @@
 import sha256 from 'crypto-js/sha256.js'
 import UTXOPool from "./UTXOPool.js";
+import MerkelTree from "../cryptoCurrency/MerkelTree.js"
 export const DIFFICULTY = 3
 
 class Block {
@@ -15,7 +16,8 @@ class Block {
     this.height = height;
     this.coinbaseBeneficiary = coinbaseBeneficiary
     this.utxoPool = new UTXOPool()
-    this.transactions = {}
+    this.transactions = []
+    //this.calculateMerkelRoot()
   }
 
   isValid() {
@@ -27,7 +29,13 @@ class Block {
     this.nonce=nonce
     this.setHash()
   }
+  /*
+  calculateMerkelRoot(){
+    const merkelTree = new MerkelTree(this.transactions)
+    this.MerkelTreeRoot = merkelTree.root
+  }
 
+   */
   calculateHash(){
     return sha256(
       this.nonce+
@@ -35,11 +43,13 @@ class Block {
         this.height+
         this.coinbaseBeneficiary+
         this.transactions
+        //this.MerkelTreeRoot
     ).toString();
   }
   setHash(){
     this.hash = this.calculateHash()
   }
+
 
 
 }
