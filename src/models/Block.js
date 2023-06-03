@@ -9,6 +9,7 @@ class Block {
 
 
 
+
   constructor(blockchain,previousHash,height,hash,coinbaseBeneficiary) {
     this.blockchain = blockchain;
     this.hash=hash
@@ -50,6 +51,29 @@ class Block {
     this.hash = this.calculateHash()
   }
 
+
+
+
+  // 根据交易变化更新区块 hash
+
+
+  // 汇总计算交易的 Hash 值
+  /**
+   * 默克尔树实现
+   */
+  combinedTransactionsHash() {
+
+  }
+
+  // 添加交易到区块
+  /**
+   * 
+   * 需包含 UTXOPool 的更新与 hash 的更新
+   */
+  addTransaction() {
+
+
+  }
 
 
 }

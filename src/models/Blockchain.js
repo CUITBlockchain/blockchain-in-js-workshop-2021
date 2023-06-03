@@ -59,6 +59,7 @@ class Blockchain {
 
   */
   _addBlock(block) {
+
     if (!block.isValid())
       return;
     if (this.containsBlock(block))
@@ -83,6 +84,8 @@ class Blockchain {
 
     this.blocks[block.hash] = block;
     // 添加 UTXO 快照与更新的相关逻辑
+
+
   }
 
 }
