@@ -1,6 +1,7 @@
 import sha256 from 'crypto-js/sha256.js'
 import UTXOPool from "./UTXOPool.js";
 import MerkelTree from "../cryptoCurrency/MerkelTree.js"
+import {values} from "ramda";
 export const DIFFICULTY = 3
 
 class Block {
@@ -17,7 +18,7 @@ class Block {
     this.height = height;
     this.coinbaseBeneficiary = coinbaseBeneficiary
     this.utxoPool = new UTXOPool()
-    this.transactions = []
+    this.transactions = {}
     //this.calculateMerkelRoot()
   }
 
@@ -62,7 +63,11 @@ class Block {
    * 默克尔树实现
    */
   combinedTransactionsHash() {
-
+    if (Object.values(this.transactions).length === 0)
+      return "No Transactions";
+    return sha256(
+        Object.values(this.transactions).map(tx =>tx.hash).join("")
+    )
   }
 
   // 添加交易到区块
@@ -70,9 +75,14 @@ class Block {
    * 
    * 需包含 UTXOPool 的更新与 hash 的更新
    */
-  addTransaction() {
-
-
+  addTransaction(transaction) {
+    if (!this.isValidTransaction(transaction)) return;
+    this.transactions[transaction.hash] = transaction
+    this.utxoPool.handleTransaction(transaction)
+    this.setHash()
+  }
+  isValidTransaction(transaction){
+    return this.utxoPool.isValidTransaction(transaction.inputPublicKey,transaction.value)
   }
 
 

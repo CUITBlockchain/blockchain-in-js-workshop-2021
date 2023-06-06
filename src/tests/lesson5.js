@@ -66,6 +66,7 @@ const main = () => {
     nextBlock.hash,
     3,
     sha256(new Date().getTime().toString()).toString(),
+      miner,
   )
 
   thirdBlock = calcNonce(thirdBlock)
@@ -138,7 +139,9 @@ const main = () => {
   
   // 对比更新交易之后的 hash 数据
   let trxHash = thirdBlock.combinedTransactionsHash().toString()
+
   thirdBlock.addTransaction(badTrx)
+
 
   assert(trxHash != thirdBlock.combinedTransactionsHash().toString(), 'Error: new trx cannot have same hash')
 
