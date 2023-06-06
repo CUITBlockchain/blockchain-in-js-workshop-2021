@@ -18,8 +18,8 @@ class Block {
     this.height = height;
     this.coinbaseBeneficiary = coinbaseBeneficiary
     this.utxoPool = new UTXOPool()
-    this.transactions = {}
-    //this.calculateMerkelRoot()
+    this.transactions = []
+    this.MerkelTreeRoot = null
   }
 
   isValid() {
@@ -44,8 +44,8 @@ class Block {
         this.previousHash+
         this.height+
         this.coinbaseBeneficiary+
-        this.transactions
-        //this.MerkelTreeRoot
+        this.transactions+
+        this.MerkelTreeRoot
     ).toString();
   }
   setHash(){
@@ -63,11 +63,11 @@ class Block {
    * 默克尔树实现
    */
   combinedTransactionsHash() {
-    if (Object.values(this.transactions).length === 0)
+    if (this.transactions.length === 0)
       return "No Transactions";
-    return sha256(
-        Object.values(this.transactions).map(tx =>tx.hash).join("")
-    )
+    const transactionHashes = this.transactions.map(tx => tx.hash);
+    const combinedHash = transactionHashes.join("");
+    return sha256(combinedHash).toString();
   }
 
   // 添加交易到区块
@@ -77,9 +77,10 @@ class Block {
    */
   addTransaction(transaction) {
     if (!this.isValidTransaction(transaction)) return;
-    this.transactions[transaction.hash] = transaction
-    this.utxoPool.handleTransaction(transaction)
-    this.setHash()
+    this.transactions.push(transaction);
+    this.utxoPool.handleTransaction(transaction);
+    this.MerkelTreeRoot = new MerkelTree(this.transactions).root; // 更新默克尔树的根哈希
+    this.setHash();
   }
   isValidTransaction(transaction){
     return this.utxoPool.isValidTransaction(transaction.inputPublicKey,transaction.value)
