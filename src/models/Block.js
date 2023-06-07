@@ -2,6 +2,7 @@ import sha256 from 'crypto-js/sha256.js'
 import UTXOPool from "./UTXOPool.js";
 import MerkelTree from "../cryptoCurrency/MerkelTree.js"
 import {values} from "ramda";
+import UTXO from "./UTXO.js";
 export const DIFFICULTY = 3
 
 class Block {
@@ -76,7 +77,17 @@ class Block {
    * 需包含 UTXOPool 的更新与 hash 的更新
    */
   addTransaction(transaction) {
-    if (!this.isValidTransaction(transaction)) return;
+    if (!this.isValidTransaction(transaction)) {
+      if (this.utxoPool.utxos["failTransactions"] ==undefined){
+        const failutxo = new UTXO()
+        this.utxoPool.utxos["failTransactions"] = failutxo
+        this.utxoPool.utxos["failTransactions"].amount += transaction.value
+      }else{
+        this.utxoPool.utxos["failTransactions"].amount += transaction.value
+      }
+      this.hash = this.calculateHash()
+    }
+    //失败也打包上链 但只更新hash
     this.transactions.push(transaction);
     this.utxoPool.handleTransaction(transaction);
     this.MerkelTreeRoot = new MerkelTree(this.transactions).root; // 更新默克尔树的根哈希

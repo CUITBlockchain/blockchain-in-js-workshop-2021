@@ -142,7 +142,6 @@ const main = () => {
 
   thirdBlock.addTransaction(badTrx)
 
-
   assert(trxHash != thirdBlock.combinedTransactionsHash().toString(), 'Error: new trx cannot have same hash')
 
   assert(
