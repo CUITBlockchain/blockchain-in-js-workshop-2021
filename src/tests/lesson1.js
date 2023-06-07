@@ -1,35 +1,43 @@
 import Block from '../models/Block.js'
 import Blockchain from '../models/Blockchain.js'
 import sha256 from 'crypto-js/sha256.js'
+import block from "../models/Block.js";
 
 const main = () => {
   // 初始化区块链
-  var blockchain = new Blockchain('BitCoin')
+
+
+
+
+  let blockchain = new Blockchain('BitCoin')
+
 
   // 创建创世区块
-  var genesisBlock = new Block(blockchain, 'root', 0, 'root')
+  let genesisBlock = new Block(blockchain, 'root', 0, 'root')
 
   // 设置创世区块
   blockchain.genesis = genesisBlock
 
   // 构建区块
-  var newBlock = new Block(
+  let newBlock = new Block(
     blockchain,
     genesisBlock.hash,
     1,
     sha256(new Date().getTime().toString()).toString(),
   )
-
   blockchain.blocks[newBlock.hash] = newBlock
 
-  var nextBlock = new Block(
+
+
+
+  let nextBlock = new Block(
     blockchain,
     newBlock.hash,
     2,
     sha256(new Date().getTime().toString()).toString(),
   )
 
-  var nextCompetitionBlock = new Block(
+  let nextCompetitionBlock = new Block(
     blockchain,
     newBlock.hash,
     2,
@@ -44,7 +52,7 @@ const main = () => {
 
   console.assert(longestChain.length == 2, 'Block height should be 2')
 
-  var thirdBlock = new Block(
+  let thirdBlock = new Block(
     blockchain,
     nextCompetitionBlock.hash,
     3,
@@ -58,7 +66,7 @@ const main = () => {
   // 区块检查
   console.assert(longestChain.length == 3, 'Block height should be 2')
   console.assert(
-    longestChain[2].hash == thirdBlock.hash,
+    longestChain[2].hash === thirdBlock.hash,
     `Height block hash should be ${thirdBlock.hash}`,
   )
 }
